@@ -3,8 +3,8 @@
 <h2>Wise People:</h2>
   <% if @parsed %>
     <% @parsed.each do |product| %>
-      <p><%= link_to product.fetch(:name), "authors/#{product.fetch(:id)}" %></p>
+      <p><%= link_to product.fetch(:name), "/authors/#{product.fetch(:id)}" %></p>
     <% end %>
   <% else %>
-  <p>There are no words of wisdom yet.</p>
+  <p>There are no wise authors yet.</p>
   <% end %>

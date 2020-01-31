@@ -1,0 +1,13 @@
+<h1> <%= @parsed.fetch(:name) %></h1>
+<h3>Hogwarts House: <%= @parsed.fetch(:house) %></h3>
+<h3>Social Security Number: <%= @parsed.fetch(:ssn) %></h3>
+<h3>Fav Flag: <%= @parsed.fetch(:flag) %></h3>
+
+<h2>Words to be remembered by...</h2>
+<% if @quotes %>
+<% @quotes.each do |quote| %>
+<p>"<%= quote.fetch(:phrase) %>"</p>
+<% end %>
+<% else %>
+<p>There are no words of wisdom yet.</p>
+<% end %>
